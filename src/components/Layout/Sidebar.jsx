@@ -26,7 +26,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className={`h-screen bg-black text-white flex flex-col transition-all  duration-300
+    <div className={`min-h-screen bg-black text-white flex flex-col transition-all  duration-300
       ${open ? 'w-48' : 'w-20'} md:w-64`}>
       
       {/* Top - Logo and Toggle Button */}
