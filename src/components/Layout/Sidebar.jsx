@@ -1,65 +1,83 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import dashboardIcon from '../../assets/dashboard.png';
+import transactionsIcon from '../../assets/transaction.png';
+import schedulesIcon from '../../assets/schedule.png';
+import usersIcon from '../../assets/user.png';
+import settingsIcon from '../../assets/setting.png';
+// import helpIcon from '../assets/help.png';
+// import contactIcon from '../assets/contact.png';
+
 const Sidebar = () => {
+  const [open, setOpen] = useState(false);
+
+  const menuItems = [
+    { name: 'Dashboard', icon: dashboardIcon, path: '/dashboard' },
+    { name: 'Transactions', icon: transactionsIcon, path: '/transactions' },
+    { name: 'Schedules', icon: schedulesIcon, path: '/schedules' },
+    { name: 'Users', icon: usersIcon, path: '/users' },
+    { name: 'Settings', icon: settingsIcon, path: '/settings' },
+  ];
+
+  const bottomItems = [
+    { name: 'Help',  },
+    { name: 'Contact Us',  },
+  ];
+
   return (
-    <div className="w-64 bg-white p-6 shadow-md">
-      <h1 className="text-2xl font-bold text-gray-800 mb-8">Board.</h1>
+    <div className={`h-screen bg-black text-white flex flex-col transition-all  duration-300
+      ${open ? 'w-48' : 'w-20'} md:w-64`}>
       
-      <nav>
-        <h2 className="text-gray-500 text-sm uppercase mb-4">Dashboard</h2>
-        <ul className="space-y-2">
-          <li>
-            <NavLink 
-              to="/dashboard" 
-              className={({isActive}) => 
-                `block p-2 rounded ${isActive ? 'text-primary font-medium' : 'text-gray-600 hover:text-primary'}`
-              }
-            >
-              Dashboard
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/transactions" 
-              className={({isActive}) => 
-                `block p-2 rounded ${isActive ? 'text-primary font-medium' : 'text-gray-600 hover:text-primary'}`
-              }
-            >
-              Transactions
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/schedules" 
-              className={({isActive}) => 
-                `block p-2 rounded ${isActive ? 'text-primary font-medium' : 'text-gray-600 hover:text-primary'}`
-              }
-            >
-              Schedules
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/users" 
-              className={({isActive}) => 
-                `block p-2 rounded ${isActive ? 'text-primary font-medium' : 'text-gray-600 hover:text-primary'}`
-              }
-            >
-              Users
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/settings" 
-              className={({isActive}) => 
-                `block p-2 rounded ${isActive ? 'text-primary font-medium' : 'text-gray-600 hover:text-primary'}`
-              }
-            >
-              Settings
-            </NavLink>
-          </li>
-        </ul>
+      {/* Top - Logo and Toggle Button */}
+      <div className="flex items-center justify-between p-4">
+        <h1 className={`text-2xl font-bold ${open ? 'block' : 'hidden'} md:block`}>
+          Board.
+        </h1>
+        <button
+          className="md:hidden text-white"
+          onClick={() => setOpen(!open)}
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Navigation Menu */}
+      <nav className="flex-1 p-2 space-y-3">
+        {menuItems.map(item => (
+          <NavLink
+            key={item.name}
+            to={item.path}
+            className={({ isActive }) =>
+              `flex items-center gap-4 px-3 py-2 rounded hover:text-cyan-400 transition 
+              ${isActive ? 'text-white-500 font-semibold' : 'text-white'}`
+            }
+          >
+            <img src={item.icon} alt={item.name} className="w-5 h-5" />
+            <span className={`transition-all duration-300 ${open ? 'block' : 'hidden'} md:block`}>
+              {item.name}
+            </span>
+          </NavLink>
+        ))}
       </nav>
+
+      {/* Bottom Menu */}
+      <div className="p-4 space-y-3">
+        {bottomItems.map(item => (
+          <NavLink
+            key={item.name}
+            to={item.path}
+            className="flex items-center gap-4 text-sm text-white hover:text-cyan-400"
+          >
+            {/* <img src={item.icon} alt={item.name} className="w-5 h-5" /> */}
+            <span className={`transition-all duration-300 ${open ? 'block' : 'hidden'} md:block`}>
+              {item.name}
+            </span>
+          </NavLink>
+        ))}
+      </div>
     </div>
   );
 };
