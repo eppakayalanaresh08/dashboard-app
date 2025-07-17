@@ -87,3 +87,19 @@ src/
 </details>
 
 ---
+
+
+## 🚀 Quick Start (Vite-Powered)
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/eppakayalanaresh08/dashboard-app.git
+cd dashboard-app
+
+npm install
+# or
+yarn
+
+npm run dev
+# or
+yarn dev
