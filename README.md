@@ -85,21 +85,24 @@ src/
     └── index.css
 
 ## 🏗️ Project Structure  folder structure explanation
-src/
-├── assets/ # Static assets (images/icons)
+
+src/src/
+├── assets/               # Static assets (images/icons)
 ├── components/
-│ ├── Dashboard/ # Dashboard widgets
-│ │ ├── DataCard.jsx # Metric cards (revenue/users)
-│ │ ├── ActivitySection.jsx # Weekly timeline
-│ │ ├── TopProducts.jsx # Product analytics
-│ │ └── Schedule.jsx # Daily agenda
-│ ├── Auth/
-│ │ └── LoginForm.jsx # Auth form with social login
-│ ├── Layout/
-│ │ ├── Sidebar.jsx # Collapsible navigation
-│ │ └── Header.jsx # Search + user profile
+│   ├── Dashboard/        # Dashboard widgets
+│   │   ├── DataCard.jsx          # Metric cards (revenue/users)
+│   │   ├── ActivitySection.jsx   # Weekly timeline
+│   │   ├── TopProducts.jsx       # Product analytics
+│   │   └── Schedule.jsx          # Daily agenda
+│   ├── Auth/
+│   │   └── LoginForm.jsx         # Auth form with social login
+│   ├── Layout/
+│   │   ├── Sidebar.jsx           # Collapsible navigation
+│   │   └── Header.jsx            # Search + user profile
 ├── pages/
-│ ├── Dashboard.jsx # Main dashboard view
-│ └── Login.jsx # Login page
-├── App.js # Router configuration
-└── styles/ # Global CSS/Tailwind
+│   ├── Dashboard.jsx     # Main dashboard view
+│   └── Login.jsx         # Login page
+├── App.js                # Router configuration
+├── index.js
+└── styles/
+    └── index.css         # Global CSS/Tailwind
