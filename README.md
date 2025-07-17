@@ -59,7 +59,6 @@
 ---
 
 ## 🏗️ Project Structure 
-
 src/
 ├── assets/
 │   └── (any images/icons)
@@ -74,6 +73,9 @@ src/
 │   ├── Layout/
 │   │   ├── Sidebar.jsx
 │   │   └── Header.jsx
+│   └── UI/
+│       ├── Button.jsx
+│       └── Input.jsx
 ├── pages/
 │   ├── Dashboard.jsx
 │   └── Login.jsx
@@ -81,7 +83,6 @@ src/
 ├── index.js
 └── styles/
     └── index.css
-
 
 ## 🏗️ Project Structure  folder structure explanation
 src/
