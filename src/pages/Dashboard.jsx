@@ -46,9 +46,7 @@ const Dashboard = () => {
           <Schedule />
         </div>
         
-        {/* <div className="mt-6">
-          <Schedule />
-        </div> */}
+    
       </main>
     </div>
     </div>

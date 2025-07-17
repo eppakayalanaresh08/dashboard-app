@@ -10,8 +10,8 @@ const Header = () => {
     <header className="flex justify-between items-center bg-gray-50 px-8 py-4 w-full">
       <h1 className="text-xl font-bold text-black">Dashboard</h1>
 
-      <div className="flex items-center space-x-4">
-        <div className="relative">
+      <div className="flex items-center space-x-2">
+        <div className="relative hidden md:block">
           <input
             type="text"
             placeholder="Search..."

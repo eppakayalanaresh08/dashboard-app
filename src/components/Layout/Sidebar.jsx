@@ -55,7 +55,7 @@ const Sidebar = () => {
               ${isActive ? 'text-white-500 font-semibold' : 'text-white'}`
             }
           >
-            <img src={item.icon} alt={item.name} className="w-5 h-5" />
+            <img src={item.icon} alt={item.name} className="" />
             <span className={`transition-all duration-300 ${open ? 'block' : 'hidden'} md:block`}>
               {item.name}
             </span>
