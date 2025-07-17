@@ -17,7 +17,7 @@ const Header = () => {
             placeholder="Search..."
             className="pl-4 pr-10 py-1 rounded-full bg-white shadow-sm text-sm text-gray-700 focus:outline-none"
           />
-          {/* <FiSearch className="absolute right-3 top-1.5 text-gray-400" size={16} /> */}
+          
           <img
             src={Search}
             alt="Search"
@@ -25,7 +25,7 @@ const Header = () => {
           />
         </div>
 
-        {/* <FiBell className="text-black cursor-pointer" size={18} /> */}
+        
         <img
           src={Notification}
           alt="Notifications"

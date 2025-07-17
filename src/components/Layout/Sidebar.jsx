@@ -6,8 +6,7 @@ import transactionsIcon from '../../assets/transaction.png';
 import schedulesIcon from '../../assets/schedule.png';
 import usersIcon from '../../assets/user.png';
 import settingsIcon from '../../assets/setting.png';
-// import helpIcon from '../assets/help.png';
-// import contactIcon from '../assets/contact.png';
+
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
